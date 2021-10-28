@@ -5,4 +5,22 @@ router.get('/', function (req, res, next) {
     res.render('index');
 });
 
+router.post('/message', function (req, res, next) {
+    var messageVar = req.body.messageBody;
+    res.redirect('/message/' + messageVar);
+});
+
+router.get('/message/:msgParam', function (req, res, next) {
+    res.render('node', {message: req.params.msgParam});
+});
+
+router.get('/login-inicio', function (req, res, next) {
+    res.render('login-inicio');
+});
+
+router.get('/register', function (req, res, next) {
+    res.render('register');
+});
+
+
 module.exports = router;
