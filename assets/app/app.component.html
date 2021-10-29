@@ -1,1 +1,12 @@
-<h1>Hello World!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <app-message></app-message>
+        </div>
+    </div>
+    
+    <input type="text"[(ngModel)] = "pessoa3.personId">
+    <input type="text"[(ngModel)] = "pessoa3.name">
+    <input type="text"[(ngModel)] = "pessoa3.age">
+    <font color="red">{{ pessoa1.personId }} - {{ pessoa1.name }} - {{ pessoa1.age }}</font>
+</div>
