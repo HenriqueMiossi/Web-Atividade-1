@@ -21,6 +21,13 @@ import { Component, EventEmitter, Input, Output } from "@angular/core";
 })
 export class MessageComponent {
 
+    color = 'yellow';
+    tam= 12;
+    onMudaStyle(){
+        this.color = 'red';
+        this.tam = 16;
+    }
+
     @Output() editClicked_MessageMetodoClasse = new EventEmitter<string>();
     @Output('outputMessage') editClicked_MessageMetodoClasseAlias = new EventEmitter<string>();
 
