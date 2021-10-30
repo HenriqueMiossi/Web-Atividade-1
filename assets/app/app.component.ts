@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Person } from './auth/person.model';
+import { Message } from './messages/message.model';
 
 @Component({
     selector: 'my-app',
@@ -8,13 +9,7 @@ import { Person } from './auth/person.model';
 })
 export class AppComponent {
 
-    message = {
-        content: 'Tô ficando fera no assunto',
-        author: 'Vinicius'
-    };
-
-    pessoa1: Person = new Person(101, 'Vinicius', 25);
-    pessoa2: Person;
-    pessoa3: Person = new Person();
+    messageBinding: Message = new Message("Texto da Mensagem", "Vinicius Rosalen");
+    messageBindingAlias: Message = new Message("Texto da Mensagem Alias", "Vinicius Rosalen Alias");
     
 }

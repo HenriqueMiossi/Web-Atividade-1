@@ -1,13 +1,15 @@
 <article class="panel panel-default">
     <div class="panel-body">
-        {{ message.content }}
+        {{ messageVarClasse.content }}
+        {{ messageVarClasseAlias.content }}
     </div>
     <footer class="panel-footer">
         <div class="author">
-            {{ message.author }}
+            {{ messageVarClasse.username }}
+            {{ messageVarClasseAlias.username }}
         </div>
         <div class="config">
-            <a href="#">Edit</a>
+            <a href="#" (click)="onEdit()">Edit</a>
             <a href="#">Delete</a>
         </div>
     </footer>
