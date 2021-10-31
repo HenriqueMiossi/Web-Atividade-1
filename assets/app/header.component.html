@@ -2,8 +2,11 @@
     <nav class="col-md-8 col-md-offset-2">
         <ul class="nav nav-pills">
             <!--(li>a)*2-->
-            <li><a href="#">Mensagens</a></li>
-            <li><a href="#">Autenticação</a></li>
+            <li routerLinkActive="active">
+                <a [routerLink] = "['/mensagens']">Mensagens</a></li>
+           
+            <li routerLinkActive="active">
+                <a [routerLink] = "['/autenticacao']">Autenticação</a></li>
             
         </ul>
     </nav>
