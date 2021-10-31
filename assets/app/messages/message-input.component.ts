@@ -13,7 +13,7 @@ export class MessageInputComponent{
     
     constructor (private messageService : MessageService){}
 
-    OnSubmit(form : NgForm){
+    onSubmit(form : NgForm){
        
         console.log(form);
     }

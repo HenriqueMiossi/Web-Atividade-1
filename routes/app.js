@@ -37,6 +37,7 @@ router.get('/login-inicio', function (req, res, next) {
     res.render('login-inicio');
 });
 
+
 router.get('/register', function (req, res, next) {
     res.render('register');
 });
