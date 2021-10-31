@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-var User = require('../models/user');
+var User = require('../assets/app/models/user');
 router.get('/node-mongodb-mongoose-user', function (req,res,next){
     res.render('node');
 })

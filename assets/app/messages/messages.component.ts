@@ -1,4 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
+import { Message } from "./message.model";
+import { MessageService } from "./message.services";
+
 
 @Component({
     selector: 'app-messages',
@@ -16,5 +19,12 @@ import { Component } from "@angular/core";
 })
 
 export class MessagesComponent{
+    @Input() messageVarClasse : Message = new Message("","");
+    @Input('inputMessage') messageVarClasseAlias : Message = new Message("","");
+
+    constructor(private messageServiceObj : MessageService){}
+    onDelete(){
+        this.messageServiceObj.deleteMessage(this.messageVarClasse);
+    }
     
 }
