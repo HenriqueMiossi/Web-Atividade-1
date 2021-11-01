@@ -15,8 +15,14 @@ export class MessageInputComponent{
     constructor (private messageService : MessageService){}
 
     onSubmit(form : NgForm){
-       
+        const messageAux = new Message(form.value.myContentngForm, 'Vini');
+        this.messageService.addMessage(messageAux)
+        .subscribe(
+            dadosSucesso => console.log(dadosSucesso),
+            dadosErro => console.log(dadosErro)
+        );
         console.log(form);
+        form.resetForm();
     }
 
     onSave(textoConsole: string){

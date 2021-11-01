@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from "./app.component";
 import { MessageComponent } from './messages/message.component';
@@ -29,7 +30,7 @@ import { LogoutComponent } from './auth/logout.component';
         LogoutComponent
 
     ],
-    imports: [BrowserModule, FormsModule,myrouting, ReactiveFormsModule],
+    imports: [BrowserModule, FormsModule,myrouting, ReactiveFormsModule, HttpModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {
