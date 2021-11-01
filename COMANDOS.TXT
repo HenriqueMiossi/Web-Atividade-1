@@ -1,0 +1,14 @@
+npm start // conexão do server
+npm run build // conexão client 
+
+
+---------- MONGO  --------------
+
+mongod --dbpath C:\Users\Windows\Desktop\TypeScript\data\db // conexão database, é onde o banco de dados está!
+mongod // conexão dabase
+mongo // conexão cliente database
+use mongodb-inicio // selecionar database
+
+Depois do mongo configurado a gente pode trabalhar nele usando o :
+MongoDB Shell Client ou MongoDbCompass
+é preciso saber os comandos de manipulação do banco... (Aula-02 - MEAN Stack - parte III - a)
