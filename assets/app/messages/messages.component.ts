@@ -19,5 +19,12 @@ import { MessageService } from "./message.services";
 })
 
 export class MessagesComponent{
+    @Input() messageVarClasse : Message = new Message("","");
+    @Input('inputMessage') messageVarClasseAlias : Message = new Message("","");
+
+    constructor(private messageServiceObj : MessageService){}
+    onDelete(){
+        this.messageServiceObj.deleteMessage(this.messageVarClasse);
+    }
     
 }

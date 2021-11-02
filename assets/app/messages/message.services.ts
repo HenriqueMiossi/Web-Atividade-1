@@ -28,15 +28,15 @@ export class MessageService {
             const responseEmJSON = responseRecebida.json();
             const messageSResponseRecebida = responseEmJSON.objSMessageSRecuperadoS;
             let transfomedCastMessagesModelFrontend : Message[] = [];
-            for(let msg of messageSResponseRecebida){
-                transfomedCastMessagesModelFrontend.push(
-                    new Message(msg.content, 'Vinicius', msg._id, null));
-            }
-            this.messageSService = transfomedCastMessagesModelFrontend;
-            return transfomedCastMessagesModelFrontend;
-        })
-        .catch((errorRecebido: Response) => Observable.throw(errorRecebido.json()));
-    }
+                for(let msg of messageSResponseRecebida){
+                    transfomedCastMessagesModelFrontend.push(
+                        new Message(msg.content, 'Vinicius', msg._id, null));
+                }
+                 this.messageSService = transfomedCastMessagesModelFrontend;
+                 return transfomedCastMessagesModelFrontend;
+                })
+                .catch((errorRecebido: Response) => Observable.throw(errorRecebido.json()));
+        }
 
     deleteMessage(message : Message){
         this.messageSService.splice(this.messageSService.indexOf(message), 1);
