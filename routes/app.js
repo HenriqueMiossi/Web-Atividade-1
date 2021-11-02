@@ -7,8 +7,6 @@ var coockieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
-var appRoutes = require('./routes/app');
-
 var app = express();
 mongoose.connect('mongodb://localhost:27017/node-angular');
 

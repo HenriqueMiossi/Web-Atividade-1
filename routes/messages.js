@@ -14,7 +14,7 @@ router.get('/', function (req, res, next) {
         }
         res.status(200).json({
             myMsgSucess: "Mensagem recuperada com sucesso",
-            objSMessageRecuperadoS : result
+            objSMessageSRecuperadoS : result
             });
         });
     });
@@ -31,9 +31,29 @@ router.post('/', function (req, res, next) {
             });
         }
         res.status(201).json({
-            myMsgSucess: "Mensagem salve com sucesso",
+            myMsgSucess: "Mensagem salva com sucesso",
             objMessageSave : result
             });
         });
     });
+
+
+
+    router.delete('/:id', function (req, res, next) {
+        Message.findOne()
+            .exec(function (err, result) {
+                console.log(req.params);
+                if (err) {
+                    return res.status(500).json({
+                        myErroTitle: 'Um erro Aconteceu na hora de deletar a mensagem',
+                        myError: err
+                    });
+                }
+                result.delete();
+                res.status(200).json({
+                    myMsgSucess: "Mensagem deletada com sucesso"
+                });
+            });
+    });
+    
 module.exports = router;
