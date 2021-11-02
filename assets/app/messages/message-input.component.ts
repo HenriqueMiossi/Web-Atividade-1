@@ -27,7 +27,6 @@ export class MessageInputComponent{
 
     onSave(textoConsole: string){
         const messageAux = new Message(textoConsole, 'Vini');
-        this.messageService.addMessage(messageAux);
         console.log(textoConsole);
     }
 
