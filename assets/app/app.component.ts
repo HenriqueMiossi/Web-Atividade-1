@@ -16,10 +16,7 @@ export class AppComponent {
         this.mostrarElemento = !this.mostrarElemento;
     }
 
-    messageS: Message[] = [ new Message("Texto Da Mensagem", "ViniciusRosalen" ),
-                            new Message("Texto 2 Da Mensagem", "RosalenSilva" ),
-                            new Message("Texto 3 Da Mensagem", "SilvaVinicius" ),
-                          ];
+    messageS: Message[] = [];
 
     messageBinding: Message = new Message("Texto da Mensagem", "Vinicius Rosalen");
     messageBindingAlias: Message = new Message("Texto da Mensagem Alias", "Vinicius Rosalen Alias");

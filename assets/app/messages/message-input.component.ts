@@ -23,6 +23,7 @@ export class MessageInputComponent{
         );
         console.log(form);
         form.resetForm();
+        location.reload();
     }
 
     onSave(textoConsole: string){

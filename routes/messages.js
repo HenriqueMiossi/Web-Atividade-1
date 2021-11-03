@@ -40,16 +40,14 @@ router.post('/', function (req, res, next) {
 
 
     router.delete('/:id', function (req, res, next) {
-        Message.findOne()
+        Message.deleteOne({ _id: req.params.id })
             .exec(function (err, result) {
-                console.log(req.params);
                 if (err) {
                     return res.status(500).json({
                         myErroTitle: 'Um erro Aconteceu na hora de deletar a mensagem',
                         myError: err
                     });
                 }
-                result.delete();
                 res.status(200).json({
                     myMsgSucess: "Mensagem deletada com sucesso"
                 });

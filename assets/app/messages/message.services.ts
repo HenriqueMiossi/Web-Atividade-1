@@ -20,6 +20,7 @@ export class MessageService {
         return this.http.post('http://localhost:3000/message', bodyReq, {headers: myHeaders})
             .map((responseRecebida: Response) => responseRecebida.json())
             .catch((errorRecebido: Response) => Observable.throw(errorRecebido.json()));
+
     }
 
     getMessages(){
@@ -43,6 +44,5 @@ export class MessageService {
             this.messageSService.splice(this.messageSService.indexOf(message), 1);
             return this.http.delete(`http://localhost:3000/message/${message.messageId}`)
                 .subscribe(() => console.log('Delete successful'));
-            
         }
 }
