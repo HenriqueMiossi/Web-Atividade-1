@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { Person } from './auth/person.model';
+import { UserService } from './auth/user.services';
 import { Message } from './messages/message.model';
 import { MessageService } from './messages/message.services';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    providers: [MessageService]
+    providers: [MessageService, UserService]
 })
 export class AppComponent {
 

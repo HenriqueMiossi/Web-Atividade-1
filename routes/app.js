@@ -16,16 +16,15 @@ router.get('/node-mongodb-mongoose-user', function (req,res,next){
 })
 
 router.post('/node-mongodb-mongoose-user', function (req,res,next){
-    var emailVar = req.body.emailBody;
     var userObject = new User({
-        firstName: 'Leo',
-        lastName: 'Chaga',
-        password: "senha",
-        email: emailVar
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        password: req.body.password,
+        email: req.body.email
     });
     userObject.save();
 
-    res.redirect('/node-mongodb-mongoose-user');
+    return res.status(200).send();
 });
 
 
