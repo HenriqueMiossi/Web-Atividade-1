@@ -7,6 +7,7 @@ var schema = new Schema({
     firstName: {type: String },
     lastName: {type: String },
     password: {type: String },
+    country: {type: String },
     email: {type: String , unique: true},
     messages: [{type: Schema.Types.ObjectId, ref:'Message'}]
 

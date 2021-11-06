@@ -21,6 +21,7 @@ export class SignupComponent implements OnInit{
             this.myForm.controls.passwordTS.value,
             this.myForm.controls.firstNameTS.value,
             this.myForm.controls.lastNameTS.value,
+            this.myForm.controls.countryTS.value,
         );
         this.userServiceObj.addUser(newUser)
         .subscribe(
@@ -38,7 +39,9 @@ export class SignupComponent implements OnInit{
                 Validators.pattern("[a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9\-\_\.]+")
 
             ]),
-            passwordTS: new FormControl(null, Validators.required)
+            passwordTS: new FormControl(null, Validators.required),
+            countryTS: new FormControl(null, Validators.required),
+            termoTS: new FormControl(null, Validators.required)
         });
     }
 }
