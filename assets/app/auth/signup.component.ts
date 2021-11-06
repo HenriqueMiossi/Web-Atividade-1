@@ -14,8 +14,6 @@ export class SignupComponent implements OnInit{
     constructor(private userServiceObj: UserService) {}
 
     onSubmit(){
-        //this.myForm.reset();
-
         const newUser = new User(
             this.myForm.controls.emailTS.value,
             this.myForm.controls.passwordTS.value,
@@ -28,6 +26,7 @@ export class SignupComponent implements OnInit{
             dadosSucesso => console.log(dadosSucesso),
             dadosErro => console.log(dadosErro)
         );
+        this.myForm.reset();
     }
 
     ngOnInit(){

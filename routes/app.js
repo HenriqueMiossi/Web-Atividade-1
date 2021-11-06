@@ -20,7 +20,8 @@ router.post('/node-mongodb-mongoose-user', function (req,res,next){
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         password: req.body.password,
-        email: req.body.email
+        email: req.body.email,
+        country: req.body.country
     });
     userObject.save();
 
