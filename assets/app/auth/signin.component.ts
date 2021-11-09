@@ -11,6 +11,9 @@ export class SigninComponent{
 
     onSubmit(){
         console.log(this.myForm);
+        localStorage.setItem('username', this.myForm.controls.emailTS.value);
+        console.log(this.myForm.controls.emailTS.value);
+        
         this.myForm.reset();
     }
 

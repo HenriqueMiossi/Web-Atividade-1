@@ -29,10 +29,13 @@ export class MessageService {
         .map((responseRecebida: Response) => {
             const responseEmJSON = responseRecebida.json();
             const messageSResponseRecebida = responseEmJSON.objSMessageSRecuperadoS;
+
+            const username = localStorage.getItem('username');
+
             let transfomedCastMessagesModelFrontend: Message[] = [];
                 for(let msg of messageSResponseRecebida){
                     transfomedCastMessagesModelFrontend.push(
-                        new Message(msg.content, 'Vinicius', msg._id, null));
+                        new Message(msg.content, username, msg._id, null));
                 }
                  this.messageSService = transfomedCastMessagesModelFrontend;
                  return transfomedCastMessagesModelFrontend;

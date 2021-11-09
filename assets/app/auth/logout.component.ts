@@ -11,7 +11,7 @@ import { Component } from "@angular/core";
 
 export class LogoutComponent{
     onLogout(){
-        
+        localStorage.removeItem('username');
     }
 
 }
